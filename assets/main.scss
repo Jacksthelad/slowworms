@@ -13,25 +13,34 @@ h2,h3 {
 
 .logo-title {
   display:flex;
+  margin: 18px 0;
 }
 
 .logo {
-  width:30%;
+  width:26%;
 }
 
 .title {
   display:flex;
   flex-direction: column;
   align-items: center;
-  width:60%;
+  justify-content: center;
+  width:74%;
 }
 
 .site-title {
-  font-family:$spicy-rice;
-  font-size:80px;
-  background: #141414;
+  padding: 16px 0;
+  font-family: $spicy-rice;
+  font-size: 100px;
+  background: #1B1B1B;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  text-decoration: none;
+}
+
+.site-title:visited {
+  background: #1B1B1B;
+  text-decoration: none;
 }
 
 .site-title:hover {
@@ -41,4 +50,33 @@ h2,h3 {
   background: linear-gradient(to right, rgba(255,131,87,1) 0%,rgba(250,193,114,1) 49%,rgba(137,213,201,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  text-decoration: none;
+}
+
+.page-link {
+  padding: 1px 2px;
+  border-radius: 4px;
+  font-size: 30px;
+}
+
+.page-link:hover {
+  background: rgb(255,131,87); /* Old browsers */
+  background: -moz-linear-gradient(left, rgba(255,131,87,1) 0%, rgba(250,193,114,1) 49%, rgba(137,213,201,1) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, rgba(255,131,87,1) 0%,rgba(250,193,114,1) 49%,rgba(137,213,201,1) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, rgba(255,131,87,1) 0%,rgba(250,193,114,1) 49%,rgba(137,213,201,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  color: #FFF;
+  text-decoration: none;
+}
+
+.site-footer {
+  padding: 16px 0;
+}
+
+.footer-col {
+  margin-bottom: 1px;
+  margin-top: 1px;
+}
+
+.contact-list, .social-media-list {
+    margin-bottom:0;
 }
