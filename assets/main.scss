@@ -7,7 +7,13 @@
 $spicy-rice:'Spicy Rice', cursive;
 $ubuntu:'Ubuntu', sans-serif;
 
-$black-heading: #262626;
+$black-heading: #303030;
+
+$dark-orange: #E25B45;
+$light-orange: #FF8357;
+$yellow: #FAC172;
+$blue: #89D5C9;
+$green: #ADC865;
 
 h2,h3 {
   font-family:$ubuntu;
@@ -28,6 +34,10 @@ h2,h3 {
   align-items: center;
   justify-content: center;
   width:74%;
+}
+
+.site-header {
+  background-color: $yellow;
 }
 
 .site-title {
@@ -93,7 +103,7 @@ h2,h3 {
   color: $black-heading;
 }
 
-.page-link:hover {
+.page-link:hover, .page-link:active {
   background: rgb(255,131,87); /* Old browsers */
   background: -moz-linear-gradient(left, rgba(255,131,87,1) 0%, rgba(250,193,114,1) 49%, rgba(137,213,201,1) 100%); /* FF3.6-15 */
   background: -webkit-linear-gradient(left, rgba(255,131,87,1) 0%,rgba(250,193,114,1) 49%,rgba(137,213,201,1) 100%); /* Chrome10-25,Safari5.1-6 */
@@ -105,7 +115,7 @@ h2,h3 {
 .site-footer {
   padding: 16px 0;
   border-top: none;
-  background: #fac172;
+  background: $light-orange;
 }
 
 .site-footer a {
