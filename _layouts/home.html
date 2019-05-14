@@ -14,6 +14,9 @@ layout: default
     <ul class="post-list">
       {%- for post in site.posts -%}
       <li>
+        {%- if post.thumbnail -%}
+          <img src="{{site.baseurl}}/assets/images/{{ posts.categories }}/{{ post.thumbnail }}">
+        {%- endif -%}
         {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
         <span class="post-meta">{{ post.date | date: date_format }}</span>
         <h3>
@@ -21,6 +24,7 @@ layout: default
             {{ post.title | escape }}
           </a>
         </h3>
+        <h5>{{ posts.categories }}</h5>
         {%- if site.show_excerpts -%}
           {{ post.excerpt }}
         {%- endif -%}
