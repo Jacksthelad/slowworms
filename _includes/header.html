@@ -1,20 +1,19 @@
 <header class="site-header" role="banner">
-
   <div class="wrapper">
     {%- assign default_paths = site.pages | map: "path" -%}
-    {%- assign page_paths = site.header_pages | default: default_paths -%}
-    <div class="logo-title">
-      <div class="logo">
-        <img src="{{site.baseurl}}/assets/images/slowworm-png.png">
-      </div>
-      <div class="title">
-        <a class="site-title" rel="author" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
-        <nav class="main-nav">
-            <a class="page-link" href="{{site.baseurl}}/bikes/">Bikes</a>
-            <a class="page-link" href="{{site.baseurl}}/vans/">Vans</a>
-        </nav>
-      </div>
-    </div>
+      {%- assign page_paths = site.header_pages | default: default_paths -%}
+        <div class="logo-title">
+          <div class="logo">
+            <img src="{{site.baseurl}}/assets/images/slowworm-png.png">
+          </div>
+          <div class="title">
+            <a class="site-title" rel="author" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
+            <nav class="main-nav">
+              <a class="page-link" href="{{site.baseurl}}/bikes/">Bikes</a>
+              <a class="page-link" href="{{site.baseurl}}/vans/">Vans</a>
+            </nav>
+          </div>
+        </div>
 
     <!-- {%- if page_paths -%}
       <nav class="site-nav">
@@ -37,5 +36,13 @@
         </div>
       </nav>
     {%- endif -%} -->
+  </div>
+  <div class="wrapper-container">
+    <div class="wrapper nav-new" style:"">
+      <nav class="">
+        <a class="nav-new-button page-link" href="{{site.baseurl}}/bikes/">Bikes</a>
+        <a class="nav-new-button page-link" href="{{site.baseurl}}/vans/">Vans</a>
+      </nav>
+    </div>
   </div>
 </header>

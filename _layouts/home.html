@@ -10,15 +10,15 @@ layout: default
   {{ content }}
 
   {%- if site.posts.size > 0 -%}
-    <h2 class="post-list-heading">{{ page.list_title | default: "Latest Posts" }}</h2>
+    <!-- <h2 class="post-list-heading">{{ page.list_title | default: "Latest Posts" }}</h2> -->
     <ul class="post-list">
       {%- for post in site.posts -%}
-      <li>
+      <li style="border:#303030 solid 6px; border-radius:8px; padding:10px">
         {%- if post.thumbnail -%}
-          <img src="{{site.baseurl}}/assets/images/{{ posts.categories }}/{{ post.thumbnail }}">
+          <img src="{{site.baseurl}}/assets/images/{{ post.categories }}/{{ post.thumbnail }}">
         {%- endif -%}
-        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-        <span class="post-meta">{{ post.date | date: date_format }}</span>
+        <!-- {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%} -->
+        <span class="post-meta">{{ post.categories }}</span>
         <h3>
           <a class="post-link" href="{{ post.url | relative_url }}">
             {{ post.title | escape }}
