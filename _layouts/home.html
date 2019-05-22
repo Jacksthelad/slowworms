@@ -13,18 +13,20 @@ layout: default
     <!-- <h2 class="post-list-heading">{{ page.list_title | default: "Latest Posts" }}</h2> -->
     <ul class="post-list">
       {%- for post in site.posts -%}
-      <li style="border:#303030 solid 6px; border-radius:8px; padding:10px">
+      <li class="post">
         {%- if post.thumbnail -%}
           <img src="{{site.baseurl}}/assets/images/{{ post.categories }}/{{ post.thumbnail }}">
         {%- endif -%}
         <!-- {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%} -->
-        <span class="post-meta">{{ post.categories }}</span>
-        <h3>
-          <a class="post-link" href="{{ post.url | relative_url }}">
-            {{ post.title | escape }}
-          </a>
-        </h3>
-        <h5>{{ posts.categories }}</h5>
+        <div class="post__info">
+          <span class="post-meta">{{ post.categories }}</span>
+          <h3>
+            <a class="post-link" href="{{ post.url | relative_url }}">
+              {{ post.title | escape }}
+            </a>
+          </h3>
+          <a href="{{ post.url | relative_url }}">Read More</a>
+        </div>
         {%- if site.show_excerpts -%}
           {{ post.excerpt }}
         {%- endif -%}
