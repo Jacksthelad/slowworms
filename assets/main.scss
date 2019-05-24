@@ -95,10 +95,12 @@ h3 {
 }
 
 .page-link {
-  padding: 1px 4px;
-  border-radius: 4px;
+  padding: 1px 4px 0;
   color: $black-heading;
   font-size: 6vw;
+  flex-grow: 1;
+  flex-basis: auto;
+  text-align: center;
 }
 
 @media screen and (min-width: 800px) {
@@ -112,12 +114,34 @@ h3 {
 }
 
 .page-link:hover, .page-link:active {
-  background: rgb(255,131,87); /* Old browsers */
-  background: -moz-linear-gradient(left, rgba(255,131,87,1) 0%, rgba(250,193,114,1) 49%, rgba(137,213,201,1) 100%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(left, rgba(255,131,87,1) 0%,rgba(250,193,114,1) 49%,rgba(137,213,201,1) 100%); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to right, rgba(255,131,87,1) 0%,rgba(250,193,114,1) 49%,rgba(137,213,201,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  color: #FFF;
+  background-color: #42baa7;
   text-decoration: none;
+}
+
+.one {
+  border-bottom: solid 4px $blue;
+}
+
+.two {
+  border-bottom: solid 4px $blue;
+}
+
+.one:hover {
+  border-bottom: solid 4px $yellow;
+}
+
+.two:hover {
+  border-bottom: solid 4px $green;
+}
+
+.one:active {
+  color: $yellow;
+  border-bottom: solid 4px $yellow;
+}
+
+.two:active {
+  color: $green;
+  border-bottom: solid 4px $green;
 }
 
 .site-footer {
@@ -146,8 +170,12 @@ h3 {
 
 .wrapper--nav {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.wrapper--nav::after {
+  content: normal;
 }
 
 .post {
