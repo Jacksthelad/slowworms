@@ -120,10 +120,13 @@ h3 {
 
 .one {
   border-bottom: solid 4px $blue;
+  border-left: solid 1px $black-heading;
 }
 
 .two {
   border-bottom: solid 4px $blue;
+  border-left: solid 1px $black-heading;
+  border-right: solid 1px $black-heading;
 }
 
 .one:hover {
@@ -140,6 +143,16 @@ h3 {
 }
 
 .two:active {
+  color: $green;
+  border-bottom: solid 4px $green;
+}
+
+.one--active {
+  color: $yellow;
+  border-bottom: solid 4px $yellow;
+}
+
+.two--active {
   color: $green;
   border-bottom: solid 4px $green;
 }

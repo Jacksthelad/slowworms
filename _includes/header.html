@@ -35,8 +35,16 @@
   </div>
   <div class="wrapper-container">
       <nav class="wrapper wrapper--nav">
-        <a class="one page-link" href="{{site.baseurl}}/bikes/">Bikes</a>
-        <a class="two page-link" href="{{site.baseurl}}/vans/">Vans</a>
+        {% if page.url == "/bikes/" %}
+          <a class="one page-link one--active" href="{{site.baseurl}}/bikes/">Bikes</a>
+          <a class="two page-link" href="{{site.baseurl}}/vans/">Vans</a>
+        {% elsif page.url == "/vans/" %}
+          <a class="one page-link" href="{{site.baseurl}}/bikes/">Bikes</a>
+          <a class="two page-link two--active" href="{{site.baseurl}}/vans/">Vans</a>
+        {% else %}
+          <a class="one page-link" href="{{site.baseurl}}/bikes/">Bikes</a>
+          <a class="two page-link" href="{{site.baseurl}}/vans/">Vans</a>
+        {% endif %}
       </nav>
   </div>
 </header>
