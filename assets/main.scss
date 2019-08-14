@@ -73,10 +73,11 @@ h3 {
 }
 
 .site-title:hover {
-  background: rgb(255,131,87); /* Old browsers */
-  background: -moz-linear-gradient(left, rgba(255,131,87,1) 0%, rgba(250,193,114,1) 49%, rgba(137,213,201,1) 100%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(left, rgba(255,131,87,1) 0%,rgba(250,193,114,1) 49%,rgba(137,213,201,1) 100%); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to right, rgba(255,131,87,1) 0%,rgba(250,193,114,1) 49%,rgba(137,213,201,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  background: #e25b45; /* Old browsers */
+  background: -moz-linear-gradient(left,  #e25b45 0%, #ff8357 31%, #89d5c9 67%, #adc865 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(left,  #e25b45 0%,#ff8357 31%,#89d5c9 67%,#adc865 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right,  #e25b45 0%,#ff8357 31%,#89d5c9 67%,#adc865 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e25b45', endColorstr='#adc865',GradientType=1 ); /* IE6-9 */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-decoration: none;
@@ -114,19 +115,20 @@ h3 {
 }
 
 .page-link:hover, .page-link:active {
-  background-color: #42baa7;
+  background-color: #6ccbbc;
   text-decoration: none;
 }
 
 .one {
-  border-bottom: solid 4px $blue;
-  border-left: solid 1px $black-heading;
+  border-bottom: solid 4px #4fc0af;
+  border-left: solid 2px $black-heading;
+  border-right: solid 2px $black-heading;
 }
 
 .two {
-  border-bottom: solid 4px $blue;
+  border-bottom: solid 4px #4fc0af;
   border-left: solid 1px $black-heading;
-  border-right: solid 1px $black-heading;
+  border-right: solid 2px $black-heading;
 }
 
 .one:hover {
@@ -137,24 +139,18 @@ h3 {
   border-bottom: solid 4px $green;
 }
 
-.one:active {
-  color: $yellow;
-  border-bottom: solid 4px $yellow;
-}
-
-.two:active {
-  color: $green;
-  border-bottom: solid 4px $green;
-}
-
 .one--active {
-  color: $yellow;
   border-bottom: solid 4px $yellow;
+  border-left: solid 2px $black-heading;
+  border-right: solid 2px $black-heading;
+  background-color: $blue;
 }
 
 .two--active {
-  color: $green;
   border-bottom: solid 4px $green;
+  border-left: solid 1px $black-heading;
+  border-right: solid 2px $black-heading;
+  background-color: $blue;
 }
 
 .site-footer {
@@ -177,8 +173,8 @@ h3 {
 }
 
 .wrapper-container {
-  background: $blue;
-  border-top: 1px $black-heading solid;
+  background: #4fc0af;
+  border-top: 2px $black-heading solid;
 }
 
 .wrapper--nav {
@@ -191,15 +187,13 @@ h3 {
   content: normal;
 }
 
-.post {
-  background-color: #ffffff;
-}
-
 .post__vans {
+  background-color: #ffffff;
   border-bottom: solid 6px $green;
 }
 
 .post__bikes {
+  background-color: #ffffff;
   border-bottom: solid 6px $yellow;
 }
 
