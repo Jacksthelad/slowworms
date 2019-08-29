@@ -47,11 +47,11 @@ h3 {
 .site-title {
   padding: 0px;
   font-family: $spicy-rice;
-  font-size: 100px;
   font-size: 13vw;
   background: $black-heading;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  text-align: center;
   text-decoration: none;
 }
 
@@ -81,6 +81,16 @@ h3 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-decoration: none;
+}
+
+.site-title span {
+  font-size: 7vw;
+}
+
+@media screen and (min-width: 800px) {
+  .site-title span {
+     font-size: 60px;
+  }
 }
 
 .main-nav {
