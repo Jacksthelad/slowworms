@@ -9,22 +9,22 @@ title: Bikes
     {% for post in site.categories.bikes %}
     <li class="post post__{{ post.categories }}">
       {%- if post.thumbnail -%}
-        <img src="{{site.baseurl}}/assets/images/bikes/{{ post.thumbnail }}">
-      {%- endif -%}
-      <!-- {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-      <span class="post-meta">{{ post.date | date: date_format }}</span> -->
-      <div class="post__info">
-        <span class="post-meta">{{ post.categories }}</span>
-        <h3>
-          <a class="post-link" href="{{ post.url | relative_url }}">
-            {{ post.title | escape }}
-          </a>
-        </h3>
-        <!-- <a href="{{ post.url | relative_url }}">Read More...</a> -->
-      </div>
-      {%- if site.show_excerpts -%}
-        {{ post.excerpt }}
-      {%- endif -%}
+        <a href="{{ post.url | relative_url }}">
+          <img src="{{site.baseurl}}/assets/images/bikes/{{ post.thumbnail }}">
+        {%- endif -%}
+        <!-- {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+        <span class="post-meta">{{ post.date | date: date_format }}</span> -->
+        <div class="post__info">
+          <span class="post-meta">{{ post.categories }}</span>
+          <h3>
+              {{ post.title | escape }}
+          </h3>
+          <!-- <a href="{{ post.url | relative_url }}">Read More...</a> -->
+        </div>
+        {%- if site.show_excerpts -%}
+          {{ post.excerpt }}
+        {%- endif -%}
+      </a>
     </li>
     {%- endfor -%}
   </ul>

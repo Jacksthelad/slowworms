@@ -108,7 +108,7 @@ h3 {
 .page-link {
   padding: 1px 4px 0;
   color: $black-text;
-  font-size: 6vw;
+  font-size: 5vw;
   flex-grow: 1;
   flex-basis: auto;
   text-align: center;
@@ -183,7 +183,7 @@ h3 {
 
 .site-footer {
   padding: 16px 0;
-  border-top: none;
+  border-top: 1px solid #828282;
   background: $yellow;
 }
 
@@ -219,20 +219,54 @@ h3 {
   position: relative;
 }
 
+.post a {
+  display: block;
+  width: 100%
+}
+
+.post img {
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 8px;
+  border-radius: 16px;
+}
+
+.post a:hover img {
+  filter: brightness(80%);
+}
+
 .post__info {
   position: absolute;
   bottom: 0px;
   left: 0px;
-  padding: 8px 28px;
-  background: white;
-  border-top-right-radius: 20px;
+  padding: 24px 44px;
 }
 
-.post__vans .post__info {
-  border-left: solid 6px $green;
-  border-bottom: solid 6px $green;
+// .post__vans .post__info {
+//   border-left: solid 6px $green;
+//   border-bottom: solid 6px $green;
+// }
+// .post__bikes .post__info {
+//   border-left: solid 6px $yellow;
+//   border-bottom: solid 6px $yellow;
+// }
+
+.post__info h3 {
+  color: white;
+  font-size: 4vw;
 }
-.post__bikes .post__info {
-  border-left: solid 6px $yellow;
-  border-bottom: solid 6px $yellow;
+
+@media screen and (min-width: 800px) {
+  .post__info h3 {
+    font-size: 24px;
+  }
+}
+
+.post-meta {
+  color: #F8F8F8;
+  font-size: 3vw;
+}
+
+@media screen and (min-width: 800px) {
+  .post-meta {
+    font-size: 14px;
+  }
 }
