@@ -2,12 +2,13 @@
 ---
 
 @import "minima";
-@import url('https://fonts.googleapis.com/css?family=Spicy+Rice|Ubuntu');
+@import url('https://fonts.googleapis.com/css?family=Barlow:400,700|Spicy+Rice&display=swap');
 
 $spicy-rice:'Spicy Rice', cursive;
-$ubuntu:'Ubuntu', sans-serif;
+$barlow:'Barlow', sans-serif;
 
 $black-text: #303030;
+$grey-subtext: #767676;
 
 $dark-orange: #E25B45;
 $light-orange: #FF8357;
@@ -16,11 +17,12 @@ $blue: #89D5C9;
 $green: #ADC865;
 
 h2,h3 {
-  font-family:$ubuntu;
+  font-family:$barlow;
 }
 
 h3 {
   margin-bottom: 0;
+  font-weight: bold;
 }
 
 .logo-title {
@@ -109,6 +111,7 @@ h3 {
   padding: 1px 4px 0;
   color: $black-text;
   font-size: 5vw;
+  font-weight: bold;
   flex-grow: 1;
   flex-basis: auto;
   text-align: center;
@@ -183,7 +186,7 @@ h3 {
 
 .site-footer {
   padding: 16px 0;
-  border-top: 1px solid #828282;
+  border-top: 2px solid $black-text;
   background: $yellow;
 }
 
@@ -203,6 +206,7 @@ h3 {
 .wrapper-container {
   background: #4fc0af;
   border-top: 2px $black-text solid;
+  border-bottom: 2px $black-text solid;
 }
 
 .wrapper--nav {
@@ -215,6 +219,16 @@ h3 {
   content: normal;
 }
 
+.post-list > li {
+  margin-bottom: 30px;
+}
+
+@media screen and (min-width: 800px) {
+  .post-list > li {
+    margin-bottom: 40px;
+  }
+}
+
 .post {
   position: relative;
 }
@@ -224,9 +238,12 @@ h3 {
   width: 100%
 }
 
+.post a:hover {
+  text-decoration: none;
+}
+
 .post img {
-  box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 8px;
-  border-radius: 16px;
+  border-radius: 3px;
 }
 
 .post a:hover img {
@@ -234,10 +251,10 @@ h3 {
 }
 
 .post__info {
-  position: absolute;
-  bottom: 0px;
-  left: 0px;
-  padding: 24px 44px;
+  // position: absolute;
+  // bottom: 0px;
+  // left: 0px;
+  padding: 6px 0px;
 }
 
 // .post__vans .post__info {
@@ -250,7 +267,7 @@ h3 {
 // }
 
 .post__info h3 {
-  color: white;
+  color: $black-text;
   font-size: 4vw;
 }
 
@@ -261,12 +278,13 @@ h3 {
 }
 
 .post-meta {
-  color: #F8F8F8;
+  color: $grey-subtext;
   font-size: 3vw;
+  font-weight: bold;
 }
 
 @media screen and (min-width: 800px) {
   .post-meta {
-    font-size: 14px;
+    font-size: 12px;
   }
 }
