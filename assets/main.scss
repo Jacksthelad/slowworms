@@ -53,19 +53,26 @@ h3 {
   background: $black-text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  line-height: 0.8;
   text-align: center;
   text-decoration: none;
-}
-
-@media screen and (min-width: 800px) {
-  .site-title {
-     font-size: 100px;
-  }
 }
 
 @media screen and (min-width: 450px) {
   .site-title {
      padding: 16px 0;
+  }
+}
+
+@media screen and (min-width: 580px) {
+  .site-title {
+     line-height: 54px;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .site-title {
+     font-size: 100px;
   }
 }
 
@@ -143,34 +150,22 @@ h3 {
 }
 
 .one {
-  border-bottom: solid 4px #4fc0af;
   border-left: solid 2px $black-text;
-  border-right: solid 2px $black-text;
+  border-right: solid 1px $black-text;
 }
 
 .two {
-  border-bottom: solid 4px #4fc0af;
   border-left: solid 1px $black-text;
   border-right: solid 2px $black-text;
 }
 
-.one:hover {
-  border-bottom: solid 4px $yellow;
-}
-
-.two:hover {
-  border-bottom: solid 4px $green;
-}
-
 .one--active {
-  border-bottom: solid 4px $yellow;
   border-left: solid 2px $black-text;
-  border-right: solid 2px $black-text;
+  border-right: solid 1px $black-text;
   background-color: $blue;
 }
 
 .two--active {
-  border-bottom: solid 4px $green;
   border-left: solid 1px $black-text;
   border-right: solid 2px $black-text;
   background-color: $blue;
