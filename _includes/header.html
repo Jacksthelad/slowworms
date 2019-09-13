@@ -34,17 +34,17 @@
     {%- endif -%} -->
   </div>
   <div class="wrapper-container">
-      <nav class="wrapper wrapper--nav">
-        {% if page.url == "/bikes/" %}
-          <a class="page-link one--active" href="{{site.baseurl}}/bikes/"><i class="fas fa-biking-mountain"></i> BIKES</a>
-          <a class="two page-link" href="{{site.baseurl}}/vans/"><i class="fas fa-rv"></i> VANS</a>
-        {% elsif page.url == "/vans/" %}
-          <a class="one page-link" href="{{site.baseurl}}/bikes/"><i class="fas fa-biking-mountain"></i> BIKES</a>
-          <a class="page-link two--active" href="{{site.baseurl}}/vans/"><i class="fas fa-rv"></i> VANS</a>
-        {% else %}
-          <a class="one page-link" href="{{site.baseurl}}/bikes/"><i class="fas fa-biking-mountain"></i> BIKES</a>
-          <a class="two page-link" href="{{site.baseurl}}/vans/"><i class="fas fa-rv"></i> VANS</a>
-        {% endif %}
-      </nav>
+    <nav class="wrapper wrapper--nav">
+      {% if page.url == "/bikes/" %}
+        <a class="page-link one--active" href="{{site.baseurl}}/bikes/"><i class="fas fa-biking-mountain"></i> BIKES</a>
+        <a class="two page-link" href="{{site.baseurl}}/vans/"><i class="fas fa-rv"></i> VANS</a>
+      {% elsif page.url == "/vans/" %}
+        <a class="one page-link" href="{{site.baseurl}}/bikes/"><i class="fas fa-biking-mountain"></i> BIKES</a>
+        <a class="page-link two--active" href="{{site.baseurl}}/vans/"><i class="fas fa-rv"></i> VANS</a>
+      {% else %}
+        <a class="one page-link" href="{{site.baseurl}}/bikes/"><i class="fas fa-biking-mountain"></i> BIKES</a>
+        <a class="two page-link" href="{{site.baseurl}}/vans/"><i class="fas fa-rv"></i> VANS</a>
+      {% endif %}
+    </nav>
   </div>
 </header>
