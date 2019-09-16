@@ -14,28 +14,43 @@ layout: default
       {%- for post in site.posts -%}
       {% if forloop.first %}
         <article class="post post--full-width">
+          <a href="{{ post.url | relative_url }}">
+            {%- if post.thumbnail -%}
+              <img src="{{site.baseurl}}/assets/images/{{ post.categories }}/{{ post.thumbnail }}">
+            {%- endif -%}
+          </a>
+          <!-- {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%} -->
+          <div class="post--full-width__post__info" style="">
+            <span class="post-meta">{{ post.categories | join: " " | upcase }}</span>
+              <h2>{{ post.title | escape }}</h2>
+            <!-- <a href="{{ post.url | relative_url }}">Read More...</a> -->
+          </div>
+          {%- if site.show_excerpts -%}
+            {{ post.excerpt }}
+          {%- endif -%}
+        </article>
       {% else %}
         <article class="post">
-      {% endif %}
-            <a href="{{ post.url | relative_url }}">
-              {%- if post.thumbnail -%}
-                <img src="{{site.baseurl}}/assets/images/{{ post.categories }}/{{ post.thumbnail }}">
-              {%- endif -%}
-              <!-- {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%} -->
-              <div class="post__info">
-                <span class="post-meta">{{ post.categories | join: " " | upcase }}</span>
-                {% if forloop.first %}
-                  <h2>{{ post.title | escape }}</h2>
-                {% else %}
-                  <h3>{{ post.title | escape }}</h3>
-                {% endif %}
-                <!-- <a href="{{ post.url | relative_url }}">Read More...</a> -->
-              </div>
-              {%- if site.show_excerpts -%}
-                {{ post.excerpt }}
-              {%- endif -%}
-            </a>
+          <a href="{{ post.url | relative_url }}">
+            {%- if post.thumbnail -%}
+              <img src="{{site.baseurl}}/assets/images/{{ post.categories }}/{{ post.thumbnail }}">
+            {%- endif -%}
+            <!-- {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%} -->
+            <div class="post__info">
+              <span class="post-meta">{{ post.categories | join: " " | upcase }}</span>
+              {% if forloop.first %}
+                <h2>{{ post.title | escape }}</h2>
+              {% else %}
+                <h3>{{ post.title | escape }}</h3>
+              {% endif %}
+              <!-- <a href="{{ post.url | relative_url }}">Read More...</a> -->
+            </div>
+            {%- if site.show_excerpts -%}
+              {{ post.excerpt }}
+            {%- endif -%}
+          </a>
         </article>
+      {% endif %}
       {%- endfor -%}
 
     <!-- <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p> -->
