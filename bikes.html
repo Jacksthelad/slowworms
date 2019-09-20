@@ -1,31 +1,52 @@
 ---
-layout: page
+layout: default
 permalink: /bikes/
 title: Bikes
 ---
 
 {%- if site.posts.size > 0 -%}
-  <ul class="post-list">
-    {% for post in site.categories.bikes %}
-    <li class="post post__{{ post.categories }}">
-      <a href="{{ post.url | relative_url }}">
-        {%- if post.thumbnail -%}
-          <img src="{{site.baseurl}}/assets/images/bikes/{{ post.thumbnail }}">
-        {%- endif -%}
-        <!-- {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-        <span class="post-meta">{{ post.date | date: date_format }}</span> -->
-        <div class="post__info">
+  <!-- <h2 class="post-list-heading">{{ page.list_title | default: "Latest Posts" }}</h2> -->
+    {%- for post in site.categories.bikes -%}
+    {% if forloop.first %}
+      <article class="post post--full-width">
+        <a href="{{ post.url | relative_url }}">
+          {%- if post.thumbnail -%}
+            <img src="{{site.baseurl}}/assets/images/{{ post.categories }}/{{ post.thumbnail }}">
+          {%- endif -%}
+        </a>
+        <!-- {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%} -->
+        <div class="post__info post--full-width__post__info" style="">
           <span class="post-meta">{{ post.categories | join: " " | upcase }}</span>
-          <h3>{{ post.title | escape }}</h3>
+            <h2>{{ post.title | escape }}</h2>
           <!-- <a href="{{ post.url | relative_url }}">Read More...</a> -->
         </div>
         {%- if site.show_excerpts -%}
           {{ post.excerpt }}
         {%- endif -%}
-      </a>
-    </li>
+      </article>
+    {% else %}
+      <article class="post">
+        <a href="{{ post.url | relative_url }}">
+          {%- if post.thumbnail -%}
+            <img src="{{site.baseurl}}/assets/images/{{ post.categories }}/{{ post.thumbnail }}">
+          {%- endif -%}
+          <!-- {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%} -->
+          <div class="post__info">
+            <span class="post-meta">{{ post.categories | join: " " | upcase }}</span>
+            {% if forloop.first %}
+              <h2>{{ post.title | escape }}</h2>
+            {% else %}
+              <h3>{{ post.title | escape }}</h3>
+            {% endif %}
+            <!-- <a href="{{ post.url | relative_url }}">Read More...</a> -->
+          </div>
+          {%- if site.show_excerpts -%}
+            {{ post.excerpt }}
+          {%- endif -%}
+        </a>
+      </article>
+    {% endif %}
     {%- endfor -%}
-  </ul>
 
   <!-- <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p> -->
 {%- endif -%}
